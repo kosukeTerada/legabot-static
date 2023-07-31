@@ -1,0 +1,772 @@
+@charset "UTF-8";
+/*! destyle.css v4.0.0 | MIT License | https://github.com/nicolas-cusan/destyle.css */
+/* Reset box-model and set borders */
+/* ============================================ */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 0;
+}
+
+/* Document */
+/* ============================================ */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ * 3. Remove gray overlay on links for iOS.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -webkit-tap-highlight-color: transparent; /* 3*/
+  scroll-behavior: smooth;
+}
+
+/* Sections */
+/* ============================================ */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/* Vertical rhythm */
+/* ============================================ */
+p,
+table,
+blockquote,
+address,
+pre,
+iframe,
+form,
+figure,
+dl {
+  margin: 0;
+}
+
+/* Headings */
+/* ============================================ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
+/* Lists (enumeration) */
+/* ============================================ */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Lists (definition) */
+/* ============================================ */
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+}
+
+/* Grouping content */
+/* ============================================ */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+  border-top-width: 1px;
+  margin: 0;
+  clear: both;
+  color: inherit;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: inherit; /* 2 */
+}
+
+address {
+  font-style: inherit;
+}
+
+/* Text-level semantics */
+/* ============================================ */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: inherit; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Replaced content */
+/* ============================================ */
+/**
+ * Prevent vertical alignment issues.
+ */
+svg,
+img,
+embed,
+object,
+iframe {
+  vertical-align: bottom;
+}
+
+/* Forms */
+/* ============================================ */
+/**
+ * Reset form fields to make them styleable.
+ * 1. Make form elements stylable across systems iOS especially.
+ * 2. Inherit text-transform from parent.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  -webkit-appearance: none; /* 1 */
+  -moz-appearance: none;
+       appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  text-align: inherit;
+  text-transform: inherit; /* 2 */
+}
+
+/**
+ * Correct cursors for clickable elements.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  cursor: pointer;
+}
+
+button:disabled,
+[type=button]:disabled,
+[type=reset]:disabled,
+[type=submit]:disabled {
+  cursor: default;
+}
+
+/**
+ * Improve outlines for Firefox and unify style with input elements & buttons.
+ */
+:-moz-focusring {
+  outline: auto;
+}
+
+select:disabled {
+  opacity: inherit;
+}
+
+/**
+ * Remove padding
+ */
+option {
+  padding: 0;
+}
+
+/**
+ * Reset to invisible
+ */
+fieldset {
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * Correct the outline style in Safari.
+ */
+[type=search] {
+  outline-offset: -2px; /* 1 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Fix font inheritance.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/**
+ * Fix appearance for Firefox
+ */
+[type=number] {
+  -moz-appearance: textfield;
+}
+
+/**
+ * Clickable labels
+ */
+label[for] {
+  cursor: pointer;
+}
+
+/* Interactive */
+/* ============================================ */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/*
+ * Remove outline for editable content.
+ */
+[contenteditable]:focus {
+  outline: auto;
+}
+
+/* Tables */
+/* ============================================ */
+/**
+1. Correct table border color inheritance in all Chrome and Safari.
+*/
+table {
+  border-color: inherit; /* 1 */
+  border-collapse: collapse;
+}
+
+caption {
+  text-align: left;
+}
+
+td,
+th {
+  vertical-align: top;
+  padding: 0;
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+}
+
+.inner {
+  padding: 0 24px;
+  max-width: 60em;
+  margin: 0 auto;
+}
+
+.--legabot-salespage {
+  background-color: #FFB000;
+  color: #150035;
+  font-family: "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif, "Segoe UI", sans-serif;
+  font-weight: 500;
+  line-height: 1.8;
+  font-size: 14px;
+  font-size: 3.7333333333vw;
+}
+.--legabot-salespage header {
+  padding: 40px 0 16px;
+  background: url(./img/bg-hero.svg) no-repeat right bottom;
+  background-size: 90% auto;
+  aspect-ratio: 375/427;
+}
+.--legabot-salespage header .inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.--legabot-salespage header .ttl {
+  font-size: 40px;
+  font-size: 10.6666666667vw;
+  font-weight: 900;
+  line-height: 1;
+}
+.--legabot-salespage header .ttl .sholder {
+  font-size: 12px;
+  font-size: 3.2vw;
+  display: block;
+  margin-bottom: 8px;
+}
+.--legabot-salespage header .description {
+  margin-top: 16px;
+  font-size: 17px;
+  font-size: 4.5333333333vw;
+  font-weight: 900;
+  line-height: 1.5;
+  padding: 8px 0;
+}
+.--legabot-salespage header .note {
+  margin-top: auto;
+  font-size: 10px;
+  font-size: 2.6666666667vw;
+  padding-left: 2em;
+  position: relative;
+}
+.--legabot-salespage header .note::before {
+  left: 0;
+  content: "※";
+  position: absolute;
+}
+.--legabot-salespage header .btn {
+  display: none;
+}
+.--legabot-salespage .sec {
+  width: 100%;
+  margin: 40px 0;
+}
+.--legabot-salespage .sec.sec-border {
+  position: relative;
+  padding-top: 40px;
+}
+.--legabot-salespage .sec.sec-border::before {
+  content: "";
+  width: 40px;
+  display: block;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  background-color: #150035;
+}
+.--legabot-salespage .sec .sec-header .ttl {
+  text-align: center;
+  font-weight: 900;
+  font-size: 20px;
+  font-size: 5.3333333333vw;
+  margin-bottom: 16px;
+}
+.--legabot-salespage .sec .sec-header .lead br {
+  display: none;
+}
+.--legabot-salespage .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+}
+.--legabot-salespage .btn a {
+  background-color: #150035;
+  color: #fff;
+  font-weight: 900;
+  max-width: 400px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.4cm;
+  width: 80%;
+  border-radius: 1cm;
+}
+.--legabot-salespage .sec01 {
+  background-color: #150035;
+  color: #fff;
+  padding: 40px 0;
+  margin-top: 0;
+}
+.--legabot-salespage .sec01 .ttl {
+  font-size: 18px;
+  font-size: 4.8vw;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+.--legabot-salespage .sec02 .lists {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+.--legabot-salespage .sec02 .lists .list {
+  display: flex;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(21, 0, 53, 0.1);
+}
+.--legabot-salespage .sec02 .lists .list .list-fig {
+  width: 60px;
+  flex-shrink: 0;
+}
+.--legabot-salespage .sec02 .lists .list .list-fig img {
+  width: 100%;
+  height: auto;
+}
+.--legabot-salespage .sec02 .border {
+  margin-top: 24px;
+}
+.--legabot-salespage .sec02 .border .message {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.--legabot-salespage .sec03 .caution {
+  margin-top: 24px;
+  font-size: 10px;
+  font-size: 2.6666666667vw;
+  position: relative;
+  padding-left: 1.5em;
+  line-height: 1.3;
+  border: 1px solid rgba(21, 0, 53, 0.1);
+  display: table;
+  padding: 16px 16px 16px 3em;
+  border-radius: 8px;
+  margin: 24px auto 0;
+}
+.--legabot-salespage .sec03 .caution .caution-ttl {
+  margin-bottom: 4px;
+}
+.--legabot-salespage .sec03 .caution::before {
+  position: absolute;
+  transform: translateX(-1.5em);
+  content: "※";
+}
+.--legabot-salespage .sec03 .limited {
+  background-color: #fff;
+  border-radius: 8px;
+  position: relative;
+  margin-top: 64px;
+  padding: 16px;
+  line-height: 1.5;
+  max-width: 60vw;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+}
+.--legabot-salespage .sec03 .limited .limited-fig {
+  float: left;
+  width: 130px;
+  margin-top: -16vw;
+}
+.--legabot-salespage .sec03 .limited .limited-fig img {
+  width: 100%;
+  height: auto;
+}
+.--legabot-salespage .sec03 .limited .limited-p br {
+  display: none;
+}
+.--legabot-salespage .sec03 .limited + p {
+  text-align: center;
+  font-weight: 900;
+  margin-top: 32px;
+  font-size: 16px;
+  font-size: 4.2666666667vw;
+}
+.--legabot-salespage .sec05 {
+  background-color: #150035;
+  padding: 40px 0;
+  margin-bottom: 0;
+  color: #fff;
+}
+.--legabot-salespage .sec05 .price-lists {
+  display: flex;
+  margin-bottom: 24px;
+  margin-top: 24px;
+}
+.--legabot-salespage .sec05 .price-lists .list {
+  flex: 1;
+  text-align: center;
+}
+.--legabot-salespage .sec05 .price-lists .list:first-of-type {
+  border-right: 1px solid #fff;
+}
+.--legabot-salespage .sec05 .price-lists .list .price {
+  font-size: 50px;
+  font-size: 13.3333333333vw;
+}
+.--legabot-salespage .sec05 .price-lists .list .price .unit {
+  font-size: 14px;
+  font-size: 3.7333333333vw;
+  padding-left: 4px;
+}
+.--legabot-salespage .sec05 .btn {
+  margin-top: 24px;
+}
+.--legabot-salespage .sec05 .btn a {
+  background-color: #fff;
+  color: #150035;
+}
+.--legabot-salespage footer {
+  background-color: #150035;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 16px 0;
+}
+@media screen and (min-width: 769px) {
+  .--legabot-salespage {
+    font-size: 4.5px;
+    font-size: 1.2vw;
+  }
+  .--legabot-salespage header {
+    min-height: 700px;
+    aspect-ratio: unset;
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+    background-size: 60vw auto;
+  }
+  .--legabot-salespage header .inner {
+    height: 100%;
+    max-width: none;
+    padding-left: 5vw;
+    justify-content: center;
+    margin: 0;
+  }
+  .--legabot-salespage header .ttl {
+    font-size: 5vw;
+  }
+  .--legabot-salespage header .ttl .sholder {
+    font-size: 2vw;
+  }
+  .--legabot-salespage header .description {
+    margin-top: 64px;
+    font-size: 1.5vw;
+  }
+  .--legabot-salespage header .note {
+    font-size: 0.8vw;
+    width: 32vw;
+  }
+  .--legabot-salespage header .btn {
+    display: block;
+  }
+  .--legabot-salespage .sec {
+    margin: 120px 0;
+  }
+  .--legabot-salespage .sec.sec-border {
+    padding-top: 120px;
+  }
+  .--legabot-salespage .sec .sec-header {
+    margin-bottom: 5vw;
+  }
+  .--legabot-salespage .sec .sec-header .ttl {
+    font-size: 3vw;
+    margin-bottom: 16px;
+  }
+  .--legabot-salespage .sec .sec-header .lead {
+    text-align: center;
+    font-size: 1.4vw;
+  }
+  .--legabot-salespage .sec .sec-header .lead br {
+    display: block;
+  }
+  .--legabot-salespage .btn {
+    margin-top: 3vw;
+  }
+  .--legabot-salespage .btn a {
+    height: auto;
+    padding-top: 0.8vw;
+    padding-bottom: 0.8vw;
+  }
+  .--legabot-salespage .sec01 {
+    margin-top: 0;
+    padding: 120px 0;
+  }
+  .--legabot-salespage .sec01 .ttl {
+    font-size: 1.8vw;
+  }
+  .--legabot-salespage .sec01 p {
+    font-size: 1.4vw;
+  }
+  .--legabot-salespage .sec02 .lists {
+    flex-direction: row;
+    margin-top: 0;
+    gap: 2.4vw;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .--legabot-salespage .sec02 .lists .list {
+    flex: 1;
+    flex-direction: column;
+    border: none;
+    padding-bottom: 0;
+  }
+  .--legabot-salespage .sec02 .lists .list .list-fig {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .--legabot-salespage .sec02 .lists .list .list-fig img {
+    height: 6vw;
+    width: auto;
+  }
+  .--legabot-salespage .sec02 .border {
+    margin-top: 4vw;
+    border-top: 1px solid rgba(21, 0, 53, 0.1);
+    padding-top: 4vw;
+    font-weight: 900;
+    font-size: 1.4vw;
+    text-align: center;
+  }
+  .--legabot-salespage .sec02 .border .message {
+    gap: 1vw;
+  }
+  .--legabot-salespage .sec03 .caution {
+    font-size: 0.8vw;
+  }
+  .--legabot-salespage .sec03 .limited {
+    margin-top: 120px;
+    padding: 24px;
+    font-size: 1.6vw;
+  }
+  .--legabot-salespage .sec03 .limited strong {
+    display: block;
+  }
+  .--legabot-salespage .sec03 .limited .limited-fig {
+    width: 13vw;
+    margin: -7vw auto 0;
+    float: none;
+  }
+  .--legabot-salespage .sec03 .limited .limited-p {
+    margin-top: -1.5vw;
+  }
+  .--legabot-salespage .sec03 .limited + p {
+    font-size: 2vw;
+  }
+  .--legabot-salespage .sec04 .sec-header .lead {
+    font-size: 1em;
+  }
+  .--legabot-salespage .sec05 {
+    padding: 120px 0;
+    margin-bottom: 0;
+  }
+  .--legabot-salespage .sec05 .price-lists {
+    margin-bottom: 40px;
+  }
+  .--legabot-salespage .sec05 .price-lists .list .price {
+    font-size: 6vw;
+  }
+  .--legabot-salespage .sec05 .price-lists .list .price .unit {
+    font-size: 2vw;
+    padding-left: 8px;
+  }
+  .--legabot-salespage .sec05 .note {
+    text-align: center;
+  }
+  .--legabot-salespage .sec05 .btn {
+    margin-top: 4vw;
+  }
+}/*# sourceMappingURL=salespage.css.map */
