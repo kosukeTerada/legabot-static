@@ -43,8 +43,17 @@ $black:#150035;
         }
     }
 
-    @media screen and (min-width :769px){
+    br.pc {
+        display: none;
+    }
 
+    @media screen and (min-width :769px){
+        br.sp {
+            display: none;
+        }
+        br.pc {
+            display: block;
+        }
     }
 }
 
