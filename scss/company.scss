@@ -1,0 +1,76 @@
+@import "reset";
+@import "base";
+
+.--legabot-company {
+    header {
+        background: $black;
+        color: #fff;
+        padding: 8px 0;
+        @include fz_vw(10);
+    }
+
+    footer {
+        padding-top: 10vw;
+        position: relative;
+        margin-top: 20vw;
+        &::before {
+            content: "";
+            width: 50px;
+            height: 2px;
+            background-color: $black;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+        }
+    }
+
+    .page-header {
+        padding: 8vw 0;
+        text-align: center;
+        @include fz_vw(18);
+        font-weight: bold;
+    }
+
+    .sec-company {
+        dl {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+        }
+    }
+
+    @media screen and (min-width :769px){
+        .inner {
+            max-width: 800px;
+        }
+        header {
+            @include fz_vw(4);
+            text-align: center;
+        }
+        footer {
+            padding-top: 4vw;
+            margin-top: 10vw;
+        }
+        .page-header {
+            padding: 4vw 0;
+            @include fz_vw(14);
+        }
+        .sec-company {
+            dl {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                div {
+                    display: flex;
+                    dt {
+                        flex-shrink: 0;
+                        width: 10em;
+                    }
+                }
+    
+            }
+        }
+    }
+}

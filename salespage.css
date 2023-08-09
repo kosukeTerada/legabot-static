@@ -375,12 +375,6 @@ th {
   font-weight: bold;
 }
 
-.inner {
-  padding: 0 24px;
-  max-width: 60em;
-  margin: 0 auto;
-}
-
 .--legabot-salespage {
   background-color: #FFB000;
   color: #150035;
@@ -389,6 +383,31 @@ th {
   line-height: 1.8;
   font-size: 14px;
   font-size: 3.7333333333vw;
+}
+@media screen and (min-width: 769px) {
+  .--legabot-salespage {
+    font-size: 4.5px;
+    font-size: 1.2vw;
+  }
+}
+.--legabot-salespage .inner {
+  padding: 0 24px;
+  max-width: 60em;
+  margin: 0 auto;
+}
+.--legabot-salespage footer {
+  color: #150035;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 16px 0;
+}
+.--legabot-salespage footer .footer-nav {
+  padding-bottom: 2vw;
+}
+.--legabot-salespage footer .footer-nav ul {
+  display: flex;
+  justify-content: space-evenly;
 }
 .--legabot-salespage header {
   padding: 40px 0 16px;
@@ -607,13 +626,6 @@ th {
 .--legabot-salespage .sec05 .btn a {
   background-color: #fff;
   color: #150035;
-}
-.--legabot-salespage footer {
-  color: #150035;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 0 16px 0;
 }
 @media screen and (min-width: 769px) {
   .--legabot-salespage {
