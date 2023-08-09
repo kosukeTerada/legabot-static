@@ -409,6 +409,18 @@ th {
   display: flex;
   justify-content: space-evenly;
 }
+.--legabot-salespage br.pc {
+  display: none;
+}
+@media screen and (min-width: 769px) {
+  .--legabot-salespage br.sp {
+    display: none;
+  }
+  .--legabot-salespage br.pc {
+    display: block;
+  }
+}
+
 .--legabot-company header {
   background: #150035;
   color: #fff;
