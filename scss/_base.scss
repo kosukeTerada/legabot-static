@@ -1,0 +1,52 @@
+$mainColor:#FFB000;
+$black:#150035;
+// font size vw to px
+@function get_vw($size, $viewport:375){
+    $rate: 100 / $viewport;
+    @return $rate * $size * 1vw;
+}
+
+@mixin fz_vw($font_size:10){
+    font-size: $font_size * 1px;
+    font-size: get_vw($font_size);
+}
+
+.--legabot-salespage {
+    background-color: $mainColor;
+    color: $black;
+    font-family: "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック Medium","Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif,  "Segoe UI",sans-serif;
+    font-weight: 500;
+    line-height: 1.8;
+    @include fz_vw(14);
+    @media screen and (min-width :769px){
+        @include fz_vw(4.5);
+
+    }
+    .inner {
+        padding: 0 24px;
+        max-width: 60em;
+        margin: 0 auto;
+    }
+    footer {
+        color: $black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 0 16px 0;
+
+        .footer-nav {
+            padding-bottom: 2vw;
+            ul {
+                display: flex;
+                justify-content: space-evenly;
+            }
+        }
+    }
+
+    @media screen and (min-width :769px){
+
+    }
+}
+
+
+
