@@ -553,8 +553,73 @@ th {
   flex-direction: column;
   gap: 8px;
 }
+.--legabot-salespage .sec03 .example {
+  padding: 40px 0;
+}
+.--legabot-salespage .sec03 .example .example-fig {
+  padding: 0 0 16px;
+  text-align: center;
+}
+.--legabot-salespage .sec03 .example .example-fig img {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+}
+.--legabot-salespage .sec03 .example ol {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.--legabot-salespage .sec03 .example ol > li {
+  counter-increment: title;
+}
+.--legabot-salespage .sec03 .example ol > li > span {
+  font-weight: bold;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 16px;
+  font-size: 4.2666666667vw;
+  line-height: 1.5;
+}
+.--legabot-salespage .sec03 .example ol > li > span::before {
+  content: counter(title);
+  flex-shrink: 0;
+  width: 1.5em;
+  height: 1.5em;
+  border: 2px solid currentColor;
+  border-radius: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding-bottom: 2px;
+}
+.--legabot-salespage .sec03 .example ol .icons {
+  margin-left: calc(1.5em + 10px);
+  margin-top: 8px;
+  flex: none;
+  width: 100%;
+  display: flex;
+  gap: 8px;
+}
+.--legabot-salespage .sec03 .example ol .icons li {
+  width: 40px;
+}
+.--legabot-salespage .sec03 .example ol .icons li img {
+  width: 100%;
+  height: auto;
+}
+.--legabot-salespage .sec03 .sample {
+  padding-top: 24px;
+}
+.--legabot-salespage .sec03 .sample a {
+  color: #fff;
+  font-weight: bold;
+  border-bottom: 1px solid currentColor;
+}
 .--legabot-salespage .sec03 .caution {
-  margin-top: 24px;
+  margin-top: 40px;
   font-size: 10px;
   font-size: 2.6666666667vw;
   position: relative;
@@ -615,6 +680,9 @@ th {
   display: flex;
   margin-bottom: 24px;
   margin-top: 24px;
+  max-width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
 }
 .--legabot-salespage .sec05 .price-lists .list {
   flex: 1;
@@ -749,6 +817,41 @@ th {
   }
   .--legabot-salespage .sec03 .caution {
     font-size: 0.8vw;
+  }
+  .--legabot-salespage .sec03 .example {
+    display: flex;
+    gap: 40px;
+    padding: 80px 0 0;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .--legabot-salespage .sec03 .example .example-fig {
+    flex-shrink: 0;
+  }
+  .--legabot-salespage .sec03 .example .example-fig img {
+    max-width: 320px;
+    max-width: 20vw;
+  }
+  .--legabot-salespage .sec03 .example .example-content {
+    flex: 1;
+  }
+  .--legabot-salespage .sec03 .example ol {
+    gap: 40px;
+  }
+  .--legabot-salespage .sec03 .example ol > li > span {
+    font-size: 5.5px;
+    font-size: 1.4666666667vw;
+    align-items: flex-start;
+  }
+  .--legabot-salespage .sec03 .example ol > li > span::before {
+    font-size: 4px;
+    font-size: 1.0666666667vw;
+    padding: 0;
+    margin-top: 0.5em;
+  }
+  .--legabot-salespage .sec03 .example .sample {
+    margin-top: 2vw;
+    width: 100%;
   }
   .--legabot-salespage .sec03 .limited {
     margin-top: 120px;
