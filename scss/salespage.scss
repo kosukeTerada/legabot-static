@@ -157,8 +157,78 @@
     }
 
     .sec03 {
+
+        .example {
+            padding: 40px 0;
+            .example-fig {
+                padding: 0 0 16px;
+                text-align: center;
+                img {
+                    max-width: 200px;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            ol {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                > li {
+                    counter-increment: title;
+                    >span {
+                        font-weight: bold;
+                        display: flex;
+                        align-items: baseline;
+                        gap: 8px;
+                        @include fz_vw(16);
+                        line-height: 1.5;
+
+                        &::before {
+                            content: counter(title);
+                            flex-shrink: 0;
+                            width: 1.5em;
+                            height: 1.5em;
+                            border:2px solid currentColor;
+                            border-radius: 1.5em;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            line-height: 1;
+                            padding-bottom: 2px;
+                        }
+                    }
+
+                }
+                .icons {
+                    margin-left: calc(1.5em + 10px);
+                    margin-top: 8px;
+                    flex:none;
+                    width: 100%;
+                    display: flex;
+                    gap: 8px;
+                    li {
+                        width: 40px;
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+
+        }
+        .sample {
+            padding-top: 24px;
+            a {
+                color: #fff;
+                font-weight: bold;
+                border-bottom: 1px solid currentColor;
+            }
+        }
+
         .caution {
-            margin-top: 24px;
+            margin-top: 40px;
             @include fz_vw(10);
             position: relative;
             padding-left: 1.5em;
@@ -223,6 +293,9 @@
             display: flex;
             margin-bottom: 24px;
             margin-top: 24px;
+            max-width: 50vw;
+            margin-left: auto;
+            margin-right: auto;
             .list {
                 flex:1;
                 text-align: center;
@@ -378,6 +451,47 @@
                 font-size: 0.8vw;
                 
             }
+
+            .example {
+                display: flex;
+                gap: 40px;
+                padding: 80px 0 0;
+                justify-content: center;
+                flex-wrap: wrap;
+                .example-fig {
+                    flex-shrink: 0;
+                    img {
+                        max-width: 320px;
+                        max-width: 20vw;
+
+                    }
+                }
+
+                .example-content {
+                    flex:1;
+                }
+
+                ol {
+                    gap: 40px;
+                     > li {
+                        > span {
+                            @include fz_vw(5.5);
+                            align-items: flex-start;
+                            &::before {
+                                @include fz_vw(4);
+                                padding: 0;
+                                margin-top: 0.5em;
+                            }
+                        }
+                     }
+                }
+
+                .sample {
+                    margin-top: 2vw;
+                    width:100%;
+                }
+            }
+
 
             .limited {
                 margin-top: 120px;
